@@ -1,0 +1,71 @@
+body, html{
+	background-color: #fff;
+	margin: 0; padding: 0;
+	height: 100%; width: 100%;
+	overflow: hidden;
+}
+.img-cont{
+	position: relative;
+	background-color: rgba(0,0,0,0.03);
+	box-shadow: 0 0 10px 4px rgba(0,0,0,0.03);
+	height: 640px;
+	width: 360px;
+	margin:0 auto;
+
+	-webkit-transform: rotate(-30deg) skew(25deg) scale(.6);
+	transform: rotate(-30deg) skew(25deg) scale(.5);
+}
+.img-cont img{
+	position: absolute;
+	width: 100%;
+
+	-webkit-transition: 0.8s ease-out;
+	transition: 0.8s cubic-bezier(1,-0.65, 0.4, 0.68);
+}
+
+.img-cont img:nth-child(3),
+.img-cont img:nth-child(2),
+.img-cont img:nth-child(1){
+	opacity: 0;
+}
+
+.img-cont:hover img:nth-child(4),
+.img-cont:hover img:nth-child(3),
+.img-cont:hover img:nth-child(2),
+.img-cont:hover img:nth-child(1){
+	-webkit-transition-property: ease-in;
+	transition-property: cubic-bezier(0.86, 0.14, 0.05, 0.8);
+}
+
+.img-cont:hover img:nth-child(4){
+	-webkit-transform: translate(160px, -160px);
+	transform: translate(160px, -160px);
+	-webkit-transition: .4s;
+	transition: .4s;
+
+	opacity: 1;
+}
+.img-cont:hover img:nth-child(3){
+	-webkit-transform: translate(120px, -120px);
+	transform: translate(120px, -120px);
+	-webkit-transition: .5s;
+	transition: .5s;
+
+	opacity: 0.4;
+}
+.img-cont:hover img:nth-child(2){
+	-webkit-transform: translate(80px, -80px);
+	transform: translate(80px, -80px);
+	-webkit-transition: .8s;
+	transition: .8s;
+
+	opacity: 0.3;
+}
+.img-cont:hover img:nth-child(1){
+	-webkit-transform: translate(40px, -40px);
+	transform: translate(40px, -40px);
+	-webkit-transition: 1s;
+	transition: 1s;
+
+	opacity: 0.2;
+}
